@@ -15,11 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className={styles.container}>
-        <main className={`${styles.main} ${inter.className}`}>
+        <main className={`${styles.main} ${inter.className} min-height-100vh`}>
           <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          {/* <div>111</div>
           <div>222</div>
           <div>333</div>
           <div>111</div>
@@ -57,7 +54,10 @@ export default function Home() {
           <div>333</div>
           <div>111</div>
           <div>222</div>
-          <div>333</div> */}
+          <div>333</div>
+          <div>111</div>
+          <div>222</div>
+          <div>333</div>
         </main>
       </div>
     </>

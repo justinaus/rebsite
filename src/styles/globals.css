@@ -1,8 +1,15 @@
 @import 'reset.css';
 
-:root {
-  --vh: 1vh;
-  --100vh: calc(var(--vh, 1vh) * 100);
+.min-height-100vh {
+  min-height: 100vh;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  .min-height-100vh {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
+  }
 }
 
 /* :root {
