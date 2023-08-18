@@ -1,5 +1,18 @@
 @import 'reset.css';
 
+main {
+  /* Footer will be hidden on iOS Safari because of bottom panel */
+  min-height: 100vh;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  main {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
+  }
+}
+
 /* :root {
   --max-width: 1100px;
   --border-radius: 12px;
