@@ -16,7 +16,13 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <main className={`${styles.main} ${inter.className} min-height-100vh`}>
-          <div>111</div>
+          <div
+            css={{
+              color: 'red',
+            }}
+          >
+            111
+          </div>
           <div>222</div>
           <div>333</div>
           {/* <div>111</div>
