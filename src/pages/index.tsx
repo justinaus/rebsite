@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Section800 from '@/components/home/section/Section800';
 import SectionFullWidth from '@/components/home/section/SectionFullWidth';
 import { suitExtraBold } from '@/fonts/suitExtraBold';
-import { getRandomHex } from '@/utils/color';
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
         <SectionFullWidth
           cssProps={{
             padding: 0,
-            backgroundColor: getRandomHex(),
+            backgroundColor: '#808000',
           }}
         >
           Full width
@@ -46,7 +45,7 @@ export default function Home() {
         </Section800>
         <Section800
           cssProps={{
-            backgroundColor: getRandomHex(),
+            backgroundColor: '#8FBC8F',
             height: 200,
           }}
         >
