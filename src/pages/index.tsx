@@ -1,9 +1,8 @@
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
-import styles from '@/styles/Home.module.css';
-
-const inter = Inter({ subsets: ['latin'] });
+import Section800 from '@/components/home/section/Section800';
+import SectionFullWidth from '@/components/home/section/SectionFullWidth';
+import { getRandomHex } from '@/utils/color';
 
 export default function Home() {
   return (
@@ -14,57 +13,44 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
-        <main className={`${styles.main} ${inter.className} min-height-100vh`}>
+      <div>
+        <SectionFullWidth>Full width</SectionFullWidth>
+        <SectionFullWidth
+          cssProps={{
+            padding: 0,
+            backgroundColor: getRandomHex(),
+          }}
+        >
+          Full width
+        </SectionFullWidth>
+        <Section800>
           <div
             css={{
-              color: 'red',
+              height: 200,
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              gap: 20,
             }}
           >
-            111
+            <h1
+              css={{
+                textAlign: 'center',
+              }}
+            >
+              Hello
+            </h1>
+            <span>안녕하세요. 반갑습니다. hi hello.</span>
           </div>
-          <div>222</div>
-          <div>333</div>
-          {/* <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div>
-          <div>111</div>
-          <div>222</div>
-          <div>333</div> */}
-        </main>
+        </Section800>
+        <Section800
+          cssProps={{
+            backgroundColor: getRandomHex(),
+            height: 200,
+          }}
+        >
+          Second Section
+        </Section800>
       </div>
     </>
   );
