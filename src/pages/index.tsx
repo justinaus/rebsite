@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import Section800 from '@/components/home/section/Section800';
 import SectionFullWidth from '@/components/home/section/SectionFullWidth';
+import { suitExtraBold } from '@/fonts/suitExtraBold';
 import { getRandomHex } from '@/utils/color';
 
 export default function Home() {
@@ -50,6 +51,22 @@ export default function Home() {
           }}
         >
           Second Section
+        </Section800>
+        <Section800>
+          <div className={suitExtraBold.className}>
+            어제보다 4℃ 높아요 · Gift 카드 등록하기 · 최대 20% 캐시백 · 61,800P
+            적립 · QR 결제
+          </div>
+        </Section800>
+        <Section800>
+          <h1>
+            어제보다 4℃ 높아요 · Gift 카드 등록하기 · 최대 20% 캐시백 · 61,800P
+            적립 · QR 결제
+          </h1>
+        </Section800>
+        <Section800>
+          어제보다 4℃ 높아요 · Gift 카드 등록하기 · 최대 20% 캐시백 · 61,800P
+          적립 · QR 결제
         </Section800>
       </div>
     </>
