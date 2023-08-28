@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Image from 'next/image';
 
 import Section800 from '@/components/home/section/Section800';
 import SectionFullWidth from '@/components/home/section/SectionFullWidth';
@@ -66,6 +67,19 @@ export default function Home() {
         <Section800>
           어제보다 4℃ 높아요 · Gift 카드 등록하기 · 최대 20% 캐시백 · 61,800P
           적립 · QR 결제
+        </Section800>
+        <Section800
+          cssProps={{
+            lineHeight: 0,
+          }}
+        >
+          <Image
+            src="/assets/images/home/giphy.gif"
+            alt="giphy"
+            width={480}
+            height={320}
+            layout="responsive" // 반응형 레이아웃
+          />
         </Section800>
       </div>
     </>
