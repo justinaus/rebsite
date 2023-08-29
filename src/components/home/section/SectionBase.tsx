@@ -1,15 +1,17 @@
 import { CSSObject } from '@emotion/react';
+import { forwardRef } from 'react';
 
 type Props = {
   cssProps?: CSSObject;
 };
 
-export default function SectionBase({
-  cssProps,
-  children,
-}: React.PropsWithChildren<Props>) {
+export default forwardRef(function SectionBase(
+  { cssProps, children }: React.PropsWithChildren<Props>,
+  ref: React.Ref<HTMLElement>,
+) {
   return (
     <section
+      ref={ref}
       css={{
         ...cssProps,
       }}
@@ -17,4 +19,4 @@ export default function SectionBase({
       {children}
     </section>
   );
-}
+});

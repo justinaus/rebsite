@@ -1,4 +1,5 @@
 import { CSSObject } from '@emotion/react';
+import React, { forwardRef } from 'react';
 
 import SectionBase from './SectionBase';
 
@@ -7,13 +8,12 @@ type Props = {
   innerProps?: CSSObject;
 };
 
-export default function Section800({
-  cssProps,
-  innerProps,
-  children,
-}: React.PropsWithChildren<Props>) {
+export default forwardRef(function Section800(
+  { cssProps, innerProps, children }: React.PropsWithChildren<Props>,
+  ref: React.Ref<HTMLElement>,
+) {
   return (
-    <SectionBase cssProps={cssProps}>
+    <SectionBase ref={ref} cssProps={cssProps}>
       <div
         css={{
           maxWidth: 800,
@@ -26,4 +26,4 @@ export default function Section800({
       </div>
     </SectionBase>
   );
-}
+});
