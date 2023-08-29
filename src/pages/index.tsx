@@ -2,6 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 
 import FloatButton from '@/components/home/FloatButton';
+import Part2 from '@/components/home/Part2';
+import Part3 from '@/components/home/Part3';
 import Section800 from '@/components/home/section/Section800';
 import SectionFullWidth from '@/components/home/section/SectionFullWidth';
 import { suitExtraBold } from '@/fonts/suitExtraBold';
@@ -83,14 +85,8 @@ export default function Home() {
               layout="responsive" // 반응형 레이아웃
             />
           </Section800>
-          <Section800
-            cssProps={{
-              backgroundColor: '#8A9A5B',
-              height: 800,
-            }}
-          >
-            Last Section
-          </Section800>
+          <Part2 />
+          <Part3 />
         </div>
         <FloatButton />
       </div>

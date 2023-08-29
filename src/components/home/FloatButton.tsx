@@ -1,11 +1,18 @@
+import { useRecoilValue } from 'recoil';
+
+import { floatButtonState } from './floatButtonState';
+
 export default function FloatButton() {
+  const isShowFloatButton = useRecoilValue(floatButtonState);
+
   return (
     <div
       css={{
         position: 'fixed',
-        bottom: 0,
         width: '100%',
         backgroundColor: '#F4C430',
+        bottom: isShowFloatButton ? 0 : '-100%',
+        transition: 'bottom 0.3s ease',
       }}
     >
       <div
