@@ -77,13 +77,24 @@ export default function Home() {
               lineHeight: 0,
             }}
           >
-            <Image
-              src="/assets/images/home/giphy.gif"
-              alt="giphy"
-              width={480}
-              height={320}
-              layout="responsive" // 반응형 레이아웃
-            />
+            <div
+              css={{
+                position: 'relative',
+                width: '100%',
+              }}
+            >
+              <Image
+                src="/assets/images/home/giphy.gif"
+                alt="giphy"
+                width={480}
+                height={320}
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+                sizes="(max-width: 800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </div>
           </Section800>
           <Part2 />
           <Part3 />
