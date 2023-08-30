@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 import { QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';

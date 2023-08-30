@@ -7,6 +7,9 @@ const List = dynamic(() => import('@/components/users/List'), {
 
 import { QueryErrorResetBoundary } from '@tanstack/react-query';
 import { ErrorBoundary } from 'react-error-boundary';
+import Skeleton from 'react-loading-skeleton';
+
+import Section800 from '@/components/home/section/Section800';
 
 export default function Users() {
   return (
@@ -15,45 +18,39 @@ export default function Users() {
         <title>Users</title>
         <meta name="description" content="Users" />
       </Head>
-      <h1>Users</h1>
-      <QueryErrorResetBoundary>
-        {({ reset }) => (
-          <ErrorBoundary
-            fallbackRender={({ error, resetErrorBoundary }) => (
-              <div>
-                There was an error!{' '}
-                <button
-                  onClick={() => resetErrorBoundary()}
-                  css={{
-                    border: '1px solid #000',
-                    padding: 8,
-                  }}
-                >
-                  Try again
-                </button>
-                <pre style={{ whiteSpace: 'normal' }}>{error.message}</pre>
-              </div>
-            )}
-            onReset={reset}
-          >
-            <Suspense
-              fallback={
-                <div
-                  css={{
-                    width: 100,
-                    height: 100,
-                    backgroundColor: 'red',
-                  }}
-                >
-                  Loading..
+      <Section800
+        cssProps={{
+          fontSize: 50,
+        }}
+      >
+        <h1>Users</h1>
+        <QueryErrorResetBoundary>
+          {({ reset }) => (
+            <ErrorBoundary
+              fallbackRender={({ error, resetErrorBoundary }) => (
+                <div>
+                  There was an error!{' '}
+                  <button
+                    onClick={() => resetErrorBoundary()}
+                    css={{
+                      border: '1px solid #000',
+                      padding: 8,
+                    }}
+                  >
+                    Try again
+                  </button>
+                  <pre style={{ whiteSpace: 'normal' }}>{error.message}</pre>
                 </div>
-              }
+              )}
+              onReset={reset}
             >
-              <List />
-            </Suspense>
-          </ErrorBoundary>
-        )}
-      </QueryErrorResetBoundary>
+              <Suspense fallback={<Skeleton count={10} />}>
+                <List />
+              </Suspense>
+            </ErrorBoundary>
+          )}
+        </QueryErrorResetBoundary>
+      </Section800>
     </>
   );
 }
