@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useSuspenseQuery } from '@suspensive/react-query';
 
 type User = {
   email: string;
@@ -25,18 +25,17 @@ type User = {
 };
 
 export default function List() {
-  const { data } = useQuery<User[]>({
+  const { data } = useSuspenseQuery<User[]>({
     queryKey: ['users'],
     queryFn: () =>
       fetch('https://jsonplaceholder.typicode.com/users').then((res) =>
         res.json(),
       ),
-    suspense: true,
   });
 
   return (
     <ul>
-      {data?.map((user) => (
+      {data.map((user) => (
         <li key={user.id}>
           {user.id} - {user.name}
         </li>
