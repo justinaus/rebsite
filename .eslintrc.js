@@ -8,6 +8,7 @@ module.exports = {
     'next/core-web-vitals', // next strict.
     'plugin:prettier/recommended', // https://github.com/prettier/eslint-plugin-prettier#recommended-configuration
     'plugin:@typescript-eslint/recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended',
   ],
   plugins: ['unused-imports', 'simple-import-sort'],
   rules: {

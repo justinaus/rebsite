@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query';
+import { useQuery } from '@tanstack/react-query';
 
 type User = {
   email: string;
@@ -25,16 +25,14 @@ type User = {
 };
 
 export default function List() {
-  const { data } = useQuery<User[]>(
-    'users',
-    () =>
+  const { data } = useQuery<User[]>({
+    queryKey: ['users'],
+    queryFn: () =>
       fetch('https://jsonplaceholder.typicode.com/users').then((res) =>
         res.json(),
       ),
-    {
-      suspense: true,
-    },
-  );
+    suspense: true,
+  });
 
   return (
     <ul>
