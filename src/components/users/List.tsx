@@ -34,7 +34,13 @@ export default function List() {
   });
 
   return (
-    <ul>
+    <ul
+      css={{
+        li: {
+          color: 'red',
+        },
+      }}
+    >
       {data.map((user) => (
         <li key={user.id}>
           {user.id} - {user.name}
