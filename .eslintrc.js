@@ -15,6 +15,7 @@ module.exports = {
     'unused-imports/no-unused-imports': 'warn',
     'simple-import-sort/imports': 'warn',
     'simple-import-sort/exports': 'warn',
-    '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-var-requires': 'warn',
+    '@typescript-eslint/no-explicit-any': 'warn',
   },
 };
