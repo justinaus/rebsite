@@ -4,16 +4,16 @@ import React, { forwardRef } from 'react';
 import SectionBase from './SectionBase';
 
 type Props = {
-  cssProps?: CSSObject;
+  className?: string;
   innerProps?: CSSObject;
 };
 
 export default forwardRef(function Section800(
-  { cssProps, innerProps, children }: React.PropsWithChildren<Props>,
+  { className, innerProps, children }: React.PropsWithChildren<Props>,
   ref: React.Ref<HTMLElement>,
 ) {
   return (
-    <SectionBase ref={ref} cssProps={cssProps}>
+    <SectionBase ref={ref} className={className}>
       <div
         css={{
           maxWidth: 800,

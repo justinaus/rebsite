@@ -19,7 +19,7 @@ export default function Users() {
         <meta name="description" content="Users" />
       </Head>
       <Section800
-        cssProps={{
+        css={{
           fontSize: 50,
         }}
       >

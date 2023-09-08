@@ -1,21 +1,19 @@
-import { CSSObject } from '@emotion/react';
-
 import SectionBase from './SectionBase';
 
 type Props = {
-  cssProps?: CSSObject;
+  className?: string;
 };
 
 export default function SectionFullWidth({
-  cssProps,
+  className,
   children,
 }: React.PropsWithChildren<Props>) {
   return (
     <SectionBase
-      cssProps={{
+      css={{
         padding: 24,
-        ...cssProps,
       }}
+      className={className}
     >
       {children}
     </SectionBase>

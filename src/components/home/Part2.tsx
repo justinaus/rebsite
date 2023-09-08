@@ -29,7 +29,7 @@ export default function Part2() {
   return (
     <Section800
       ref={intersectionRef}
-      cssProps={{
+      css={{
         height: 3000,
         backgroundColor: 'red',
       }}

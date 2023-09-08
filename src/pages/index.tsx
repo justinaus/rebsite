@@ -20,7 +20,7 @@ export default function Home() {
         <div>
           <SectionFullWidth>Full width</SectionFullWidth>
           <SectionFullWidth
-            cssProps={{
+            css={{
               padding: 0,
               backgroundColor: '#808000',
             }}
@@ -48,7 +48,7 @@ export default function Home() {
             </div>
           </Section800>
           <Section800
-            cssProps={{
+            css={{
               backgroundColor: '#8FBC8F',
               height: 800,
             }}
@@ -72,7 +72,7 @@ export default function Home() {
             적립 · QR 결제
           </Section800>
           <Section800
-            cssProps={{
+            css={{
               lineHeight: 0,
             }}
           >
