@@ -2,6 +2,7 @@ import { css } from '@emotion/react';
 import Head from 'next/head';
 
 import SectionFullWidth from '@/components/home/section/SectionFullWidth';
+import { colors } from '@/constants/color';
 
 // https://emotion.sh/docs/best-practices#consider-defining-styles-outside-your-components
 const cardCss = {
@@ -16,6 +17,14 @@ const cardCss = {
     fontSize: '1.25rem',
   }),
 };
+
+export const errorCss = css({
+  color: 'red',
+  fontWeight: 'bold',
+});
+
+// Use arrays to compose styles
+export const largeErrorCss = css([errorCss, { fontSize: '1.5rem' }]);
 
 // https://emotion.sh/docs/best-practices#use-the-style-prop-for-dynamic-styles
 export default function Test() {
@@ -49,6 +58,13 @@ export default function Test() {
         <div css={cardCss.self}>
           <h5 css={cardCss.title}>4444</h5>
           333
+        </div>
+        <div
+          css={{
+            color: colors.success,
+          }}
+        >
+          123
         </div>
       </SectionFullWidth>
     </>
